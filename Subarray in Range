@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main()
+{
+    int n,start,end,i;
+    printf("Array Size : ");
+    scanf("%d",&n);
+    printf("Enter %d Aray Elements : ",n);
+    int a[n];
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    printf("Enter Start and End Range : ");
+    scanf("%d %d",&start,&end);
+    if(start>n || end>n)
+    {
+        printf("Out of Range");
+        goto end;
+    }
+    for(int i=start;i<=end;i++)
+    {
+        printf("%d\t",a[i]);
+    }
+    end:
+    return 0;
+}
